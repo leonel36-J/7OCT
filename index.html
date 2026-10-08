@@ -1,1 +1,479 @@
 
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo este tiempo, siempre tú ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Georgia, 'Times New Roman', serif;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(180, 120, 255, 0.18), transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(255, 150, 220, 0.12), transparent 25%),
+                linear-gradient(135deg, #08050d, #160b20, #0b0710);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* ESTRELLAS */
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 8px white;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: .2;
+                transform: scale(.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.4);
+            }
+        }
+
+        /* CONTENIDO */
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .small {
+            color: #d9b7ff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 8vw, 82px);
+            font-weight: normal;
+            line-height: 1.05;
+            margin-bottom: 20px;
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #e8caff,
+                #ffffff
+            );
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 35px rgba(210, 160, 255, .2);
+        }
+
+        .subtitle {
+            max-width: 650px;
+            margin: auto;
+            font-size: 19px;
+            line-height: 1.8;
+            color: #ded5e5;
+        }
+
+        .date {
+            margin-top: 25px;
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #c99cff;
+        }
+
+        /* CORAZÓN */
+
+        .heart {
+            margin: 45px auto;
+            width: 70px;
+            height: 70px;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: heartbeat 2s infinite;
+        }
+
+        .heart,
+        .heart::before,
+        .heart::after {
+            background: #b87cff;
+            box-shadow: 0 0 35px rgba(184, 124, 255, .55);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -35px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 35px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: rotate(-45deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(-45deg) scale(1.12);
+            }
+        }
+
+        /* CARTA */
+
+        .letter {
+            margin: 70px auto;
+            max-width: 700px;
+            padding: 45px 35px;
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(220,180,255,.2);
+            border-radius: 25px;
+            backdrop-filter: blur(12px);
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.35),
+                inset 0 0 30px rgba(255,255,255,.02);
+        }
+
+        .letter h2 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: #e5c9ff;
+        }
+
+        .letter p {
+            color: #ddd3e4;
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            color: #d0a6ff;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        /* FLORES */
+
+        .flowers {
+            font-size: 45px;
+            margin: 50px 0 20px;
+            letter-spacing: 12px;
+            filter: drop-shadow(0 0 12px rgba(190,130,255,.5));
+        }
+
+        /* VIDEO */
+
+        .video-section {
+            margin-top: 80px;
+        }
+
+        .video-section h2 {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .video-section p {
+            color: #aaa0b0;
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid rgba(220,180,255,.25);
+            box-shadow: 0 25px 70px rgba(0,0,0,.5);
+            background: #050308;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* FINAL */
+
+        .final {
+            margin-top: 100px;
+            padding-bottom: 80px;
+        }
+
+        .final p {
+            font-size: 21px;
+            line-height: 1.8;
+            color: #e6dcea;
+        }
+
+        .final strong {
+            color: #d1a3ff;
+            font-weight: normal;
+        }
+
+        footer {
+            color: #766b7c;
+            font-size: 12px;
+            letter-spacing: 2px;
+            padding-bottom: 30px;
+        }
+
+        /* CORAZONES FLOTANDO */
+
+        .floating {
+            position: fixed;
+            bottom: -30px;
+            font-size: 18px;
+            animation: float 8s linear infinite;
+            opacity: .6;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: .7;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding-top: 55px;
+            }
+
+            .letter {
+                padding: 30px 22px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .letter p {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+
+        <div class="small">
+            7 de octubre
+        </div>
+
+        <h1>
+            Todo este tiempo,<br>
+            siempre tú.
+        </h1>
+
+        <p class="subtitle">
+            Hay fechas que simplemente pasan...
+            y hay otras que se quedan para siempre
+            en la memoria de alguien.
+        </p>
+
+        <div class="date">
+            Una pequeña parte de todo lo que nunca dejé de sentir.
+        </div>
+
+        <div class="heart"></div>
+
+        <div class="flowers">
+            💜 🌷 💜 🌷 💜
+        </div>
+
+        <section class="letter">
+
+            <h2>
+                Para ti, niña linda...
+            </h2>
+
+            <p>
+                Quizá no sé cómo terminará esta historia,
+                pero sí sé que hay cosas que nunca pude
+                dejar de sentir.
+            </p>
+
+            <br>
+
+            <p>
+                Este pequeño espacio existe solamente para
+                guardar algunas de esas palabras, recuerdos
+                y sentimientos que durante tanto tiempo
+                estuvieron en mi corazón.
+            </p>
+
+            <div class="signature">
+                Con cariño,<br>
+                alguien que todavía te recuerda.
+            </div>
+
+        </section>
+
+        <section class="video-section">
+
+            <h2>
+                Quería que vieras esto...
+            </h2>
+
+            <p>
+                Hay cosas que son demasiado largas para decirlas
+                en una sola conversación.
+            </p>
+
+            <div class="video-container">
+
+                <!-- AQUÍ IRÁ EL VIDEO -->
+
+                <iframe
+                    src="AQUI_PONDREMOS_EL_VIDEO"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+        <section class="final">
+
+            <div class="flowers">
+                💜
+            </div>
+
+            <p>
+                No sé qué hará el destino con nuestras historias,
+                pero hay algo que sí sé:
+                <br><br>
+
+                <strong>
+                    algunas personas llegan a nuestra vida
+                    y dejan una parte de ellas para siempre.
+                </strong>
+            </p>
+
+        </section>
+
+        <footer>
+            Hecho con cariño · 7.10.2026
+        </footer>
+
+    </div>
+
+
+    <script>
+
+        /* CREAR ESTRELLAS */
+
+        const stars = document.getElementById("stars");
+
+        for (let i = 0; i < 100; i++) {
+
+            const star = document.createElement("div");
+
+            star.classList.add("star");
+
+            star.style.left = Math.random() * 100 + "%";
+            star.style.top = Math.random() * 100 + "%";
+
+            star.style.animationDelay =
+                Math.random() * 3 + "s";
+
+            star.style.opacity =
+                Math.random();
+
+            stars.appendChild(star);
+        }
+
+
+        /* CORAZONES FLOTANTES */
+
+        function createHeart() {
+
+            const heart = document.createElement("div");
+
+            heart.classList.add("floating");
+
+            heart.innerHTML =
+                Math.random() > .5 ? "💜" : "♡";
+
+            heart.style.left =
+                Math.random() * 100 + "%";
+
+            heart.style.animationDuration =
+                (6 + Math.random() * 6) + "s";
+
+            heart.style.fontSize =
+                (14 + Math.random() * 14) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 12000);
+        }
+
+        setInterval(createHeart, 1200);
+
+    </script>
+
+</body>
+</html>
+```
