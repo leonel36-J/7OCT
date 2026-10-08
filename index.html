@@ -1,179 +1,1080 @@
-        <!-- CARTA -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <section>
+    <title>Todo este tiempo, siempre tú ❤️</title>
 
-            <div class="card letter">
+    <style>
 
-                <h2 class="letter-title">
-                    Una carta para ti 💜
-                </h2>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-                <p>
-                    Hola niña...
-                </p>
+        html {
+            scroll-behavior: smooth;
+        }
 
-                <p>
-                    No sé muy bien cómo empezar esto, porque siento que podría
-                    escribirte durante horas y aun así no conseguir decirte
-                    todo lo que llevo dentro.
-                </p>
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
 
-                <p>
-                    Desde que terminamos hay algo que no ha cambiado:
-                    <strong>te sigo amando.</strong>
-                </p>
+            background:
+                radial-gradient(
+                    circle at top,
+                    #32194d 0%,
+                    #140b20 40%,
+                    #07050b 100%
+                );
 
-                <p>
-                    He intentado distraerme, ocuparme en otras cosas y convencerme
-                    de que debería dejar de sentir todo esto, pero no quiero
-                    mentirte. Cuando pienso en ti, sigo sintiendo lo mismo.
-                </p>
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-                <p>
-                    Te extraño muchísimo. Extraño hablar contigo, tus mensajes,
-                    tus ocurrencias, tus ojitos, tus abrazos y todas esas pequeñas
-                    cosas que quizá antes parecían normales, pero que ahora daría
-                    muchísimo por volver a vivir.
-                </p>
 
-                <p>
-                    Y sí...
-                    <strong>quiero que vuelvas.</strong>
-                </p>
+        /* =========================
+           ESTRELLAS
+        ========================= */
 
-                <p>
-                    No quiero fingir que esto solamente se trata de recordar
-                    el pasado. Yo todavía tengo esperanza. Todavía existe una
-                    parte de mí que cree que nuestra historia puede tener otra
-                    oportunidad.
-                </p>
+        .stars {
+            position: fixed;
+            inset: 0;
 
-                <p>
-                    Una oportunidad para volver a encontrarnos, hablar,
-                    entendernos y hacer las cosas mucho mejor que antes.
-                </p>
+            pointer-events: none;
 
-                <p>
-                    Este 7 de octubre significa muchísimo para mí. Hace un año
-                    estaba frente a ti con flores, dulces y una carta, sin
-                    imaginar todo lo que íbamos a vivir después.
-                </p>
+            z-index: 0;
 
-                <p>
-                    Y hoy estoy aquí otra vez, con algo que sigue siendo
-                    completamente real:
-                    <strong>lo que siento por ti.</strong>
-                </p>
+            background-image:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,.8) 1px,
+                    transparent 1px
+                ),
 
-                <p>
-                    No te estoy dando esto para obligarte a responderme ni para
-                    que tomes una decisión ahora. Solo quiero que conozcas mi
-                    verdad.
-                </p>
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,.5) 1px,
+                    transparent 1px
+                );
 
-                <p>
-                    <strong>Yo todavía te elijo.</strong>
-                </p>
+            background-size:
+                90px 90px,
+                140px 140px;
 
-                <p>
-                    Te elegiría para volver a conocerte, para volver a
-                    enamorarte, para volver a construir algo contigo y para
-                    demostrarte con hechos que puedo hacerlo mejor.
-                </p>
+            background-position:
+                10px 20px,
+                50px 80px;
 
-                <p>
-                    No quiero que pienses que lo nuestro fue algo pasajero para
-                    mí. No quiero que pienses que simplemente te olvidé o que
-                    dejé de sentir por ti.
-                </p>
+            opacity: .45;
+        }
 
-                <p>
-                    <strong>Te amé entonces y te sigo amando ahora.</strong>
-                </p>
 
-                <p>
-                    Y si alguna parte de ti todavía siente algo por mí, quiero
-                    que sepas que aquí estoy.
-                </p>
+        /* =========================
+           CONTENEDOR
+        ========================= */
 
-                <p>
-                    No importa cuánto tiempo haya pasado. Yo todavía tengo
-                    esperanza de que algún día podamos volver a encontrarnos
-                    y volver a ser nosotros.
-                </p>
+        .container {
 
-                <p>
-                    Porque yo no quiero despedirme de ti.
-                </p>
+            position: relative;
 
-                <p>
-                    <strong>Quiero volver a tenerte en mi vida.</strong>
-                </p>
+            z-index: 2;
 
-                <p>
-                    Quiero volver a escuchar tu voz, volver a verte sonreír,
-                    volver a compartir momentos contigo y volver a sentir esa
-                    conexión que alguna vez tuvimos.
-                </p>
+            width: 90%;
 
-                <p>
-                    Y si algún día decides volver, quiero que sepas que aquí
-                    voy a estar, con el mismo amor que hoy siento por ti.
-                </p>
+            max-width: 900px;
 
-                <p>
-                    Porque aunque hayan cambiado muchas cosas, aunque ahora
-                    todo parezca diferente y aunque no sepa qué pasará mañana...
-                </p>
+            margin: auto;
 
-                <p>
-                    <strong>yo todavía estoy aquí.</strong>
-                </p>
+            padding-bottom: 80px;
+        }
 
-                <p>
-                    <strong>
-                        Todavía te amo.<br>
-                        Todavía te extraño.<br>
-                        Todavía te elijo.<br>
-                        Y todavía espero que algún día volvamos a ser nosotros.
-                    </strong>
-                </p>
 
-                <p>
-                    No quiero que estas palabras sean un adiós.
-                    Quiero que sean todo lo contrario:
-                    <strong>quiero que sepas que mi amor por ti sigue aquí.</strong>
-                </p>
+        /* =========================
+           PORTADA
+        ========================= */
 
-                <div class="signature">
-                    Te quiero muchísimo,<br>
-                    mi niña ❤️💜
-                </div>
+        .hero {
 
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px 10px;
+        }
+
+
+        .small-text {
+
+            font-size: 15px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: #d7b7ff;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(
+                45px,
+                9vw,
+                85px
+            );
+
+            line-height: 1;
+
+            margin-bottom: 25px;
+
+            text-shadow:
+                0 0 25px
+                rgba(190,120,255,.7);
+        }
+
+
+        .hero h1 span {
+
+            color: #d6a8ff;
+        }
+
+
+        .hero p {
+
+            max-width: 600px;
+
+            font-size: 20px;
+
+            line-height: 1.7;
+
+            color: #e6dcec;
+        }
+
+
+        .heart {
+
+            font-size: 55px;
+
+            margin-top: 30px;
+
+            animation:
+                heartbeat 1.7s infinite;
+        }
+
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+
+                transform: scale(1);
+            }
+
+            50% {
+
+                transform: scale(1.18);
+            }
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        section {
+
+            margin: 80px 0;
+        }
+
+
+        .card {
+
+            background:
+                rgba(255,255,255,.07);
+
+            border:
+                1px solid
+                rgba(255,255,255,.12);
+
+            backdrop-filter:
+                blur(12px);
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(0,0,0,.35);
+        }
+
+
+        .card h2 {
+
+            text-align: center;
+
+            font-size: 32px;
+
+            margin-bottom: 25px;
+
+            color: #dcbcff;
+        }
+
+
+        .card p {
+
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            color: #eee5f5;
+
+            margin-bottom: 18px;
+        }
+
+
+        .card strong {
+
+            color: #f0d8ff;
+
+            text-shadow:
+                0 0 10px
+                rgba(220,180,255,.3);
+        }
+
+
+        /* =========================
+           VIDEO
+        ========================= */
+
+        .video-section {
+
+            text-align: center;
+        }
+
+
+        .video-section h2 {
+
+            font-size: 34px;
+
+            color: #dcbcff;
+
+            margin-bottom: 15px;
+        }
+
+
+        .video-section > p {
+
+            color: #cfc2d8;
+
+            margin-bottom: 30px;
+
+            font-size: 17px;
+        }
+
+
+        .video-container {
+
+            position: relative;
+
+            width: 100%;
+
+            padding-bottom: 56.25%;
+
+            height: 0;
+
+            overflow: hidden;
+
+            border-radius: 22px;
+
+            box-shadow:
+
+                0 0 30px
+                rgba(172,102,255,.25),
+
+                0 20px 60px
+                rgba(0,0,0,.5);
+
+            border:
+                1px solid
+                rgba(255,255,255,.15);
+        }
+
+
+        .video-container iframe {
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 100%;
+
+            left: 0;
+
+            top: 0;
+
+            border: none;
+        }
+
+
+        /* =========================
+           CARTA
+        ========================= */
+
+        .letter {
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(91,52,116,.35),
+                    rgba(255,255,255,.06)
+                );
+        }
+
+
+        .letter-title {
+
+            text-align: center;
+
+            font-size: 36px;
+
+            margin-bottom: 30px;
+
+            color: #e0bfff;
+        }
+
+
+        .signature {
+
+            text-align: right;
+
+            margin-top: 35px;
+
+            font-size: 22px;
+
+            line-height: 1.7;
+
+            color: #d5adff;
+        }
+
+
+        /* =========================
+           FLORES
+        ========================= */
+
+        .flowers {
+
+            text-align: center;
+
+            font-size: 45px;
+
+            letter-spacing: 10px;
+
+            margin: 30px 0;
+
+            animation:
+                floatFlowers 3s ease-in-out infinite;
+        }
+
+
+        @keyframes floatFlowers {
+
+            0%, 100% {
+
+                transform: translateY(0);
+            }
+
+            50% {
+
+                transform: translateY(-8px);
+            }
+        }
+
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final {
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+
+        .final h2 {
+
+            font-size:
+                clamp(
+                    32px,
+                    7vw,
+                    55px
+                );
+
+            color: #dfbaff;
+
+            text-shadow:
+                0 0 25px
+                rgba(200,130,255,.5);
+        }
+
+
+        .final p {
+
+            margin-top: 20px;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #d8cadd;
+        }
+
+
+        /* =========================
+           CORAZONES FLOTANDO
+        ========================= */
+
+        .floating-heart {
+
+            position: fixed;
+
+            bottom: -30px;
+
+            font-size: 20px;
+
+            opacity: .7;
+
+            animation:
+                rise 8s linear infinite;
+
+            pointer-events: none;
+
+            z-index: 1;
+        }
+
+
+        .h1 {
+
+            left: 10%;
+
+            animation-delay: 1s;
+        }
+
+
+        .h2 {
+
+            left: 30%;
+
+            animation-delay: 4s;
+        }
+
+
+        .h3 {
+
+            left: 65%;
+
+            animation-delay: 2s;
+        }
+
+
+        .h4 {
+
+            left: 85%;
+
+            animation-delay: 6s;
+        }
+
+
+        @keyframes rise {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    scale(.8);
+
+                opacity: 0;
+            }
+
+
+            20% {
+
+                opacity: .7;
+            }
+
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    scale(1.3);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           MÓVIL
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .card {
+
+                padding:
+                    25px 20px;
+            }
+
+
+            .card p {
+
+                font-size: 16px;
+
+                line-height: 1.8;
+            }
+
+
+            .hero p {
+
+                font-size: 17px;
+            }
+
+
+            section {
+
+                margin: 55px 0;
+            }
+
+
+            .letter-title {
+
+                font-size: 30px;
+            }
+
+
+            .signature {
+
+                font-size: 19px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         FONDO
+    ========================= -->
+
+    <div class="stars"></div>
+
+
+    <!-- =========================
+         CORAZONES
+    ========================= -->
+
+    <div class="floating-heart h1">
+        ❤️
+    </div>
+
+    <div class="floating-heart h2">
+        💜
+    </div>
+
+    <div class="floating-heart h3">
+        ❤️
+    </div>
+
+    <div class="floating-heart h4">
+        💜
+    </div>
+
+
+    <main class="container">
+
+
+        <!-- =========================
+             PORTADA
+        ========================= -->
+
+        <section class="hero">
+
+            <div class="small-text">
+                Para la persona que todavía amo
             </div>
 
-        </section>
 
+            <h1>
 
-        <!-- FINAL -->
+                Todo este tiempo,
+                <br>
 
-        <section class="final">
+                <span>
+                    siempre tú.
+                </span>
 
-            <div class="flowers">
-                💜 🌷 💜 🌷 💜
-            </div>
+            </h1>
 
-            <h2>
-                Todavía te elijo.
-            </h2>
 
             <p>
-                Todavía te amo, todavía te extraño y todavía tengo esperanza
-                de volver a encontrarnos.
+
+                Hay personas que llegan a nuestra vida
+                y simplemente se quedan en nuestro corazón.
+
+                <br><br>
+
+                Y tú sigues estando en el mío.
+
             </p>
+
 
             <div class="heart">
                 ❤️
             </div>
 
         </section>
+
+
+
+        <!-- =========================
+             VIDEO
+        ========================= -->
+
+        <section class="video-section">
+
+            <h2>
+                Para ti 💜
+            </h2>
+
+
+            <p>
+
+                Hice este pequeño espacio porque hay cosas
+                que no sé explicar solamente con palabras.
+
+            </p>
+
+
+            <div class="video-container">
+
+                <iframe
+
+                    src="https://www.youtube.com/embed/svzrDFUm1Wc"
+
+                    title="Todo este tiempo, siempre tú"
+
+                    allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share
+                    "
+
+                    allowfullscreen>
+
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FLORES
+        ========================= -->
+
+        <div class="flowers">
+
+            💜 🌷 💜 🌷 💜
+
+        </div>
+
+
+
+        <!-- =========================
+             CARTA
+        ========================= -->
+
+        <section>
+
+            <div class="card letter">
+
+
+                <h2 class="letter-title">
+
+                    Una carta para ti 💜
+
+                </h2>
+
+
+                <p>
+
+                    Hola niña...
+
+                </p>
+
+
+                <p>
+
+                    No sé muy bien cómo empezar esto,
+                    porque siento que podría escribirte durante
+                    horas y aun así no conseguir decirte todo
+                    lo que llevo dentro.
+
+                </p>
+
+
+                <p>
+
+                    Desde que terminamos hay algo que no ha cambiado:
+
+                    <strong>
+                        te sigo amando.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    He intentado distraerme, ocuparme en otras cosas
+                    y convencerme de que debería dejar de sentir todo
+                    esto, pero no quiero mentirte.
+
+                    Cuando pienso en ti,
+                    sigo sintiendo lo mismo.
+
+                </p>
+
+
+                <p>
+
+                    Te extraño muchísimo.
+
+                    Extraño hablar contigo,
+                    tus mensajes,
+                    tus ocurrencias,
+                    tus ojitos,
+                    tus abrazos
+
+                    y todas esas pequeñas cosas que quizá antes
+                    parecían normales, pero que ahora daría muchísimo
+                    por volver a vivir.
+
+                </p>
+
+
+                <p>
+
+                    Y sí...
+
+                    <strong>
+                        quiero que vuelvas.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    No quiero fingir que esto solamente se trata
+                    de recordar el pasado.
+
+                    Yo todavía tengo esperanza.
+
+                    Todavía existe una parte de mí que cree que
+                    nuestra historia puede tener otra oportunidad.
+
+                </p>
+
+
+                <p>
+
+                    Una oportunidad para volver a encontrarnos,
+                    hablar, entendernos y hacer las cosas mucho
+                    mejor que antes.
+
+                </p>
+
+
+                <p>
+
+                    Este 7 de octubre significa muchísimo para mí.
+
+                    Hace un año estaba frente a ti con flores,
+                    dulces y una carta, sin imaginar todo lo que
+                    íbamos a vivir después.
+
+                </p>
+
+
+                <p>
+
+                    Y hoy estoy aquí otra vez,
+                    con algo que sigue siendo completamente real:
+
+                    <strong>
+                        lo que siento por ti.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    No te estoy dando esto para obligarte a
+                    responderme ni para que tomes una decisión ahora.
+
+                    Solo quiero que conozcas mi verdad.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Yo todavía te elijo.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    Te elegiría para volver a conocerte,
+                    para volver a enamorarte,
+                    para volver a construir algo contigo
+
+                    y para demostrarte con hechos que puedo hacerlo mejor.
+
+                </p>
+
+
+                <p>
+
+                    No quiero que pienses que lo nuestro fue algo
+                    pasajero para mí.
+
+                    No quiero que pienses que simplemente te olvidé
+                    o que dejé de sentir por ti.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Te amé entonces y te sigo amando ahora.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    Y si alguna parte de ti todavía siente algo por mí,
+                    quiero que sepas que aquí estoy.
+
+                </p>
+
+
+                <p>
+
+                    No importa cuánto tiempo haya pasado.
+
+                    Yo todavía tengo esperanza de que algún día
+                    podamos volver a encontrarnos y volver a ser nosotros.
+
+                </p>
+
+
+                <p>
+
+                    Porque yo no quiero despedirme de ti.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Quiero volver a tenerte en mi vida.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    Quiero volver a escuchar tu voz,
+                    volver a verte sonreír,
+                    volver a compartir momentos contigo
+
+                    y volver a sentir esa conexión que alguna vez tuvimos.
+
+                </p>
+
+
+                <p>
+
+                    Y si algún día decides volver,
+                    quiero que sepas que aquí voy a estar,
+                    con el mismo amor que hoy siento por ti.
+
+                </p>
+
+
+                <p>
+
+                    Porque aunque hayan cambiado muchas cosas,
+                    aunque ahora todo parezca diferente
+
+                    y aunque no sepa qué pasará mañana...
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        yo todavía estoy aquí.
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+
+                        Todavía te amo.
+                        <br>
+
+                        Todavía te extraño.
+                        <br>
+
+                        Todavía te elijo.
+                        <br>
+
+                        Y todavía espero que algún día
+                        volvamos a ser nosotros.
+
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    No quiero que estas palabras sean un adiós.
+
+                    Quiero que sean todo lo contrario:
+
+                    <strong>
+                        quiero que sepas que mi amor por ti sigue aquí.
+                    </strong>
+
+                </p>
+
+
+                <div class="signature">
+
+                    Te quiero muchísimo,
+
+                    <br>
+
+                    mi niña ❤️💜
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FLORES FINALES
+        ========================= -->
+
+        <div class="flowers">
+
+            💜 🌷 💜 🌷 💜
+
+        </div>
+
+
+
+        <!-- =========================
+             FINAL
+        ========================= -->
+
+        <section class="final">
+
+
+            <div class="flowers">
+
+                💜 💜 💜
+
+            </div>
+
+
+            <h2>
+
+                Todavía te elijo.
+
+            </h2>
+
+
+            <p>
+
+                Todavía te amo,
+                todavía te extraño
+
+                y todavía tengo esperanza
+                de volver a encontrarnos.
+
+            </p>
+
+
+            <div class="heart">
+
+                ❤️
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>
